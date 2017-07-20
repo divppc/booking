@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+		meta(charset="UTF-8")
+		link(rel="stylesheet", href="https://necolas.github.io/normalize.css/3.0.2/normalize.css")
+		link(rel="stylesheet", href="style.css")
+		link(href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" rel="stylesheet")
+		link(href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet")
+		link(href="assets/css/slick.css" rel="stylesheet")
+		title Ukrainian Luxury Recreation | Category
+	body
+		header
+			.mobile-toggle
+				.burger-line
+					i
+				.burger-line
+					i
+				.burger-line
+					i
+			.logo
+				a(href="#")
+					img(src="assets/images/logo.png", alt="Ukrainian Luxury Recreation" class="img-responsive")
+			.to-services
+		section.card
+			.card-slider
+				.slides
+					.item
+						img(src="assets/images/card-photo.png", alt="")
+					.item
+						img(src="assets/images/card-photo.png", alt="")
+					.item
+						img(src="assets/images/card-photo.png", alt="")
+			.card-title
+				h1 FAIRMONT GRAND HOTEL
+					span Address 02095  KIEV
+				.description
+					p.
+						Nec vestibulum ultrices ut hendrerit sed. Interdum lobortis ante. Etiam suspendisse fermentum aliquet lorem est id amet cursus. Integer in semper. Tellus molestie sequi arcu id ornare phasellus vivamus et dapibus risus ac. In ornare luctus. Nibh egestas elit sed amet arcu feugiat risus nulla. Scelerisque metus nibh ipsum ligula pellentesque. Elit et magna fringilla ac hendrerit nec odio mi. Nulla odio irure. Id sollicitudin quis. Odio arcu et. Sodales sollicitudin massa interdum erat justo. Ullamcorper vestibulum malesuada. Sed aliqua parturient neque ante non quis integer pede malesuada saepe ornare.
+					p.
+						 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A provident, commodi autem at libero praesentium reprehenderit ex facilis quo ducimus ut dignissimos sunt aperiam quam neque, ab illum sequi quia.			
+				form(action="#" class="check-rooms")
+					.form-item Availability
+					.form-item
+						span Check-in date
+						input(type="text" class="datepicker" required)
+					.form-item
+						span Check-out date
+						input(type="text" class="datepicker" required)
+					.form-item
+						input(type="submit" value="View")
+			.card-data
+				h2 Type Rooms
+				table
+					thead
+						tr
+							td Room type
+							td Max. people
+							td Price per 2 night(s)
+							td Aviable
+							td Reservation
+					tbody
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+						tr
+							td Four-Bedroom  Apartment  (8 Adults)
+							td 8
+							td 580 €
+							td 10
+							td
+								a(href="#" class="reserve") I'll reserve
+				.modal
+					.modal-container
+						a(href="#" class="close-modal")
+						form(action="#" class="reserve-form")
+							.form-field
+								.input-holder.date-value
+									label(for="checkin" ) I'm coming
+									input(type="text" value="2017/07/19" class="datepicker" id="checkin" required)
+								.input-holder.date-value
+									label(for="checkout") I'm leaving
+									input(type="text" value="2017/07/19" class="datepicker" id="checkout" required)
+							.form-field
+								.input-holder.select
+									label(for="adults") Adults
+									select#adults(name="adults" required)
+										option(value="1") 1
+										option(value="2") 2
+										option(value="3") 3
+										option(value="4") 4
+								.input-holder.select
+									label(for="children") Children
+									select#children(name="children" required)
+										option(value="1") 1
+										option(value="2") 2
+										option(value="3") 3
+										option(value="4") 4
+							.form-field
+								.input-holder.select
+									label(for="type-room") Typ of room
+									select#type-room(name="type-room" required)
+										option(value="lux") Lux
+										option(value="standart") Standart
+								.input-holder
+									label(for="name") Full Name
+									input(type="text" id="name" required placeholder="Bruno Mars")
+							.form-field
+								.input-holder
+									label(for="phone") Telephone
+									input(type="text" id="phone" required placeholder="3 80 78 890 98 75")
+								.input-holder
+									label(for="mail") Email
+									input(type="email" id="mail" required placeholder="brunomars@gmail.com")
+							.form-field
+								.input-holder
+									label(for="additional-service") Additional services
+									input(type="text" id="additional-service" required placeholder="Tickets")
+									span All fieds are required*
+								.input-holder
+									label(for="message") Message
+									textarea#message(name="message")
+							.form-field
+								button(type="submit") Send request
+		.disclaimer.
+			Ukrainian Luxury Recretian by Karavan Lux I INFO@URL.COM |  38 044 000 00 00 | Creation and development sites  Ower-Studio
+		nav.navigation
+			ul.menu
+				li
+					a(href="#") HOTELS
+				li
+					a(href="#") GOLF
+				li
+					a(href="#") SPA&MEDICAL
+				li
+					a(href="#") MICE
+				li
+					a(href="#") FOR JEWISH
+				li
+					a(href="#" class="active") ADDITIONAL SERVICES
+			ul.additional-menu
+				li
+					a(href="#" class="active") ABOUTS US
+				li
+					a(href="#") FAQ
+				li
+					a(href="#") CONTACTS
+			ul.social
+				li
+					a(href="#" class="viber" title="Viber")
+				li
+					a(href="#" class="skype" title="Skype")
+				li
+					a(href="#" class="call" title="Call")
+			.disclaimer.
+					Ukrainian Luxury Recretian by Karavan Lux I INFO@URL.COM |  38 044 000 00 00 | Creation and development sites  Ower-Studio
+		script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+		script(src="assets/js/jquery.scrollify.min.js")
+		script(src="assets/js/jquery-ui.min.js")
+		script(src="assets/js/slick.min.js")
+		script(src="assets/js/main.js")

@@ -1,0 +1,153 @@
+.navigation {
+	width: 100%;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	transition: 0.5s;
+	left: 0;
+	background: rgba(0,0,0, .86);
+	padding: 20vh 20px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+
+	@media (min-width: $responsive-desktop) {
+		padding: 20vh 27px;
+	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 9;
+	}
+
+	ul {
+
+		&:not(.social) {
+
+			a {
+				display: flex;
+				align-items: center;
+				text-transform: uppercase;
+				color: #b7985b;
+
+				&:before {
+					display: block;
+					content: '';
+					width: 10px;
+					height: 2px;
+					background: #e7bb5d;
+					margin: 0 10px;
+					opacity: 0;
+					transition: 0.3s;
+
+					@media (min-width: $responsive-desktop) {
+						width: 30px;
+						margin: 0 35px;
+					}
+				}
+
+				&:hover,
+				&.active {
+
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.menu {
+		margin-bottom: 30px;
+
+		@media (min-width: $responsive-desktop) {
+			margin-bottom: 60px;
+		}
+
+		li {
+			
+			&:not(:last-child) {
+				margin-bottom: 10px;
+
+				@media (min-width: $responsive-desktop) {
+					margin-bottom: 20px;
+				}
+			}
+
+			a {
+				font-size: 16px;
+
+				@media (min-width: $responsive-desktop) {
+					font-size: 20.58px;
+				}
+			}
+		}
+	}
+
+	.additional-menu {
+		margin-bottom: 30px;
+
+		li {
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+
+				@media (min-width: $responsive-desktop) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		a {
+			font-size: 12px;
+
+			@media (min-width: $responsive-desktop) {
+				font-size: 15.27px;
+			}
+		}
+	}
+
+	.social {
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+
+		@media(min-width: $responsive-desktop) {
+			padding-left: 100px;
+		}
+
+		li {
+
+			&:not(:last-child) {
+				margin-right: 23px;
+			}
+
+			a {
+				width: 23px;
+				height: 23px;
+				display: block;
+				background: url("assets/images/icons.png") no-repeat;
+			}
+		}
+
+		.viber {
+			background-position: 0 -246px;
+		}
+
+		.skype {
+			background-position: 0 -270px;
+		}
+
+		.call {
+			background-position: 0 -294px;
+		}
+	}
+
+	.disclaimer {
+		position: absolute;
+		width: 100%;
+		bottom: 50px;
+		left: 0;
+	}
+}

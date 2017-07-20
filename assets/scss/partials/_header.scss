@@ -1,0 +1,107 @@
+header {
+	position: fixed;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	z-index: 10;
+	width: calc(100% - 40px);
+	left: 20px;
+	position: fixed;
+	top: 20px;
+
+	@media (min-width: $responsive-desktop) {
+		padding: 0 37px;
+	}
+
+	&:before,
+	&:after {
+		width: calc(50% - 40px);
+		display: block;
+		content: '';
+		height: 7px;
+		top: 0;
+		position: absolute;
+		background: #b7985b;
+
+		@media (min-width: $responsive-tablet) {
+			width: calc(50% - 90px);
+		}
+	}
+
+	&:before {
+		left: 0;
+	}
+
+	&:after {
+		right: 0;
+	}
+
+	.logo {		
+		width: 50px;
+
+		@media (min-width: $responsive-tablet) {
+			width: 80px;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	.mobile-toggle {
+		cursor: pointer;
+		margin-bottom: 5px;
+
+		.burger-line {
+			width: 35px;
+			height: 5px;
+			border-bottom: 1px solid #b7985b;
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+
+			&:before {
+				display: block;				
+				content: '';
+				height: 4px;
+				background: #b7985b;
+				padding-left: 35px;
+				transition: 0.3s;
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
+
+		&.active {
+
+			.burger-line {
+				&:before {
+					padding-left: 15px;
+					width: 0px;
+				}
+			}
+		}
+
+		@media (min-width: $responsive-desktop) {
+
+			&:hover {
+
+				.burger-line {
+					&:before {
+						padding-left: 15px;
+						width: 0px;
+					}
+				}
+			}
+		}
+	}
+
+	.to-services {
+		width: 34px;
+		height: 25px;
+		margin-bottom: 5px;
+		background: url('assets/images/icons.png') no-repeat 0px 0px;
+		cursor: pointer;
+	}
+}

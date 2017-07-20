@@ -1,0 +1,170 @@
+/*!
+ * Theme Name: Ukrainian Luxury Booking
+ * Theme URI: http://booking.div.agency
+ * Author: Okal Ihor
+ * Author URI: http://div.agency
+ * Version: 1.0
+ */
+/* COMMON */
+@import 'variables';
+/* GENERAL */
+
+@font-face {
+	font-family: 'assets/fonts/33535gillsansmt';
+	src: url('assets/fonts/33535gillsansmt.eot');
+	src: local('33535gillsansmt'), url('assets/fonts/33535gillsansmt.woff') format('woff'), url('assets/fonts/33535gillsansmt.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'CENTAUR';
+	src: url('assets/fonts/CENTAUR.eot');
+	src: local('CENTAUR'), url('assets/fonts/CENTAUR.woff') format('woff'), url('assets/fonts/CENTAUR.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Back-to-Black-Demo';
+    src:url('assets/fonts/Back-to-Black-Demo.ttf.woff') format('woff'),
+        url('assets/fonts/Back-to-Black-Demo.ttf.svg#Back-to-Black-Demo') format('svg'),
+        url('assets/fonts/Back-to-Black-Demo.ttf.eot'),
+        url('assets/fonts/Back-to-Black-Demo.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+	height: 100%;
+
+	@media (min-width: $responsive-desktop) {
+		&:after {
+			width: calc(100% - 40px);
+			display: block;
+			content: '';
+			height: 7px;
+			bottom: 20px;
+			position: fixed;
+			background: #b7985b;
+			right: 20px;
+			z-index: 10;
+		}
+	}
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+body {
+	font-family: $libre;
+	max-width: 1920px;
+	width: 100%;
+	position: relative;
+	min-width: 320px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+
+	@media (min-width: $responsive-desktop) {
+		&:before,
+		&:after {
+			width: 7px;
+			display: block;
+			content: '';
+			height: calc(100% - 40px);
+			top: 20px;
+			z-index: 10;
+			position: fixed;
+			background: #b7985b;
+		}
+
+		&:before {
+			left: 20px;
+		}
+
+		&:after {
+			right: 20px;
+		}
+	}
+}
+.container {
+	max-width: $container-width;
+	margin: 0 auto;
+	padding: 0 10px;
+	@media (min-width: $responsive-desktop) {
+		padding: 0;
+	}
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+}
+
+@keyframes blur {
+  0% {
+      opacity: .3;
+  }
+  50% {
+      opacity: .5;
+  }
+  75% {
+      opacity: 1;
+  }
+  100% {
+			opacity: 0;
+  }
+}
+
+@-webkit-keyframes blur {
+  0% {
+      opacity: .3;
+  }
+  50% {
+      opacity: .5;
+  }
+  75% {
+      opacity: 1;
+  }
+  100% {
+			opacity: 0;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+	font-weight: normal;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+/* PARTIALS */
+@import 'partials/menu';
+@import 'partials/header';
+@import 'partials/footer';
+
+/* PAGES */
+@import 'pages/main';
+@import 'pages/additional-service';
+@import 'pages/category';
+@import 'pages/card';
