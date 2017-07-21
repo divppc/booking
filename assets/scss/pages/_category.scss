@@ -4,10 +4,14 @@ section.category {
 	.container {
 		padding-top: 20vh;
 		text-align: center;
+
+		@media (min-width: $responsive-desktop) {
+			padding-top: 13vh;
+		}
 	}
 
 	.category-container {		
-		margin: 0 auto;
+		margin: 0 auto 48px;
 		display: flex;
 		flex-wrap: wrap;
 
@@ -119,6 +123,26 @@ section.category {
 			background: #b7985b;
 
 			color: #fff;
+		}
+	}
+
+	.scroll {
+		margin: 0 auto 80px;
+
+		a {
+			background: transparent;
+
+			&:before {
+				display: block;
+				content: '';
+				width: 25px;
+				height: 13px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: url('assets/images/icons.png') no-repeat 0px -317px;
+			}
 		}
 	}
 }

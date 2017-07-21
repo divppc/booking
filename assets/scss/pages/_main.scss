@@ -151,63 +151,63 @@ section.main {
 			}
 		}
 	}
+}
 
-	.scroll {
+.scroll {
+	position: relative;
+	width: 71px;
+	height: 71px;
+	cursor: pointer;
+	margin: 0 auto calc(18.55vmin - 30px);
+
+	a {
+		display: block;
+		font-size: 14.47px;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
 		position: relative;
-		width: 71px;
-		height: 71px;
-		cursor: pointer;
-		margin: 0 auto calc(18.55vmin - 30px);
+		z-index: 1;
+		text-align: center;
+		line-height: 71px;
+		border-radius: 50%;
+		border: 1px solid #b7985b;
+		font-style: italic;
+		transition: 0.3s;
+		color: #000;
+		background: #b7985b;
 
-		a {
-			display: block;
-			font-size: 14.47px;
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			position: relative;
-			z-index: 1;
-			text-align: center;
-			line-height: 71px;
-			border-radius: 50%;
-			border: 1px solid #b7985b;
-			font-style: italic;
-			transition: 0.3s;
-			color: #000;
-			background: #b7985b;
+		&:hover {
+			background: transparent;
+			color: #b7985b;
+		}
+	}
 
-			&:hover {
-				background: transparent;
-				color: #b7985b;
-			}
+	.animate-circle {
+		position: absolute;
+		top: 50%;
+		border-radius: 50%;
+		border: 1px solid #b7985b;
+		left: 50%;
+		transition: 0.3s;
+		transform: translate(-50%, -50%);
+
+		&:first-of-type {				
+			width: 89px;
+			height: 89px;
+			animation: blur 1s .5s ease-out infinite;
 		}
 
-		.animate-circle {
-			position: absolute;
-			top: 50%;
-			border-radius: 50%;
-			border: 1px solid #b7985b;
-			left: 50%;
-			transition: 0.3s;
-			transform: translate(-50%, -50%);
+		&:nth-of-type(2) {
+			width: 105px;
+			height: 105px;
+			animation: blur 1s .75s ease-out infinite;
+		}
 
-			&:first-of-type {				
-				width: 89px;
-				height: 89px;
-				animation: blur 1s .5s ease-out infinite;
-			}
-
-			&:nth-of-type(2) {
-				width: 105px;
-				height: 105px;
-				animation: blur 1s .75s ease-out infinite;
-			}
-
-			&:nth-of-type(3) {
-				width: 122px;
-				height: 122px;
-				animation: blur 1s 1s ease-out infinite;
-			}
+		&:nth-of-type(3) {
+			width: 122px;
+			height: 122px;
+			animation: blur 1s 1s ease-out infinite;
 		}
 	}
 }
